@@ -19,7 +19,7 @@ section.clear-options input,
 /* section.clear-options>select, */
 #clear-button {
   /* float: right; */
-  position:  absolute;
+  position: absolute;
   left: 9em;
 }
 

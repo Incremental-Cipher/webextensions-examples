@@ -43,9 +43,10 @@ function forget(storedSettings) {
     }
 
     const times = {
+      fiveMinutes: () => { return 1000 * 60 * 5 },
       hour: () => { return 1000 * 60 * 60 },
       day: () => { return 1000 * 60 * 60 * 24 },
-      week: () => { return 1000 * 60 * 60 * 24 * 7}
+      week: () => { return 1000 * 60 * 60 * 24 * 7 }
     }
 
     const sinceMilliseconds = times[selectedSince].call();

@@ -46,7 +46,10 @@ function wrapper() {
 
       const times = {
         fiveMinutes: () => { return 1000 * 60 * 5 },
+        fifteenMinutes: () => { return 1000 * 60 * 15 },
         hour: () => { return 1000 * 60 * 60 },
+        threeHours: () => { return 1000 * 60 * 60 * 3 },
+        twelveHours: () => { return 1000 * 60 * 60 * 12 },
         day: () => { return 1000 * 60 * 60 * 24 },
         week: () => { return 1000 * 60 * 60 * 24 * 7 }
       }

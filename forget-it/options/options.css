@@ -18,9 +18,8 @@ section.clear-options {
 section.clear-options input,
 /* section.clear-options>select, */
 #clear-button {
-  /* float: right; */
-  position: absolute;
-  left: 9em;
+  position: sticky;
+  left: 11em;
 }
 
 label {

@@ -15,7 +15,8 @@
 
   "browser_action": {
     "default_icon": "icons/trash.svg",
-    "default_title": "Forget it!"
+    "default_title": "Forget it!",
+    "default_popup": "options/options.html"
   },
 
   "options_ui": {

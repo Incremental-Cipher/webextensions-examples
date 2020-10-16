@@ -58,5 +58,16 @@ gettingStoredSettings.then(updateUI, onError);
 /*
 On clicking the save button, save the currently selected settings.
 */
+
+function notifySave() {
+  browser.notifications.create({
+    "type": "basic",
+    "title": 'Preferences saved',
+    "message": ""
+  });
+}
 const saveButton = document.querySelector("#save-button");
-saveButton.addEventListener("click", storeSettings);
+saveButton.addEventListener("click", () => {
+  storeSettings();
+  notifySave();
+});

@@ -1,5 +1,7 @@
 
 body {
+  padding-top: 0.5em; 
+  padding-left: 0.5em; 
   width: 25em;
   font-family: "Open Sans Light", sans-serif;
   font-size: 0.9em;
@@ -7,8 +9,8 @@ body {
 }
 
 img {
-  margin-left: 1em;
   border: 0.1em solid black;
+  margin-right: 1em;
 }
 
 section.clear-options {

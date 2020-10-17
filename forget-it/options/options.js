@@ -1,4 +1,10 @@
 /*
+load browser icon state from storage
+*/
+const icon = localStorage.getItem('icon');
+browser.browserAction.setIcon({path:icon});
+
+/*
 Store the currently selected settings using browser.storage.local.
 */
 function storeSettings() {
@@ -19,9 +25,10 @@ function storeSettings() {
     return dataTypes;
   }
 
-  function getIcon() {
-    
-  }
+  // function getIcon(){
+  //   const icon = localStorage.getItem('icon');
+  //   return icon;
+  // }
 
   const since = getSince();
   const dataTypes = getTypes();
@@ -29,6 +36,9 @@ function storeSettings() {
     since,
     dataTypes
   });
+
+  // const icon = getIcon();
+  // browser.browserAction.setIcon({path:icon});
 }
 
 /*
@@ -76,26 +86,34 @@ saveButton.addEventListener("click", () => {
   notify();
 });
 
-const redTrash = document.getElementById("black-trash");
-const blackTrash = document.getElementById("red-trash");
+/*
+On click of icon in options, set browser icon to selected colour and save to storage
+*/
+const blackTrash = document.getElementById("black-trash");
+const redTrash = document.getElementById("red-trash");
 const greenTrash = document.getElementById("green-trash");
 const blueTrash = document.getElementById("blue-trash");
 const yellowTrash = document.getElementById("yellow-trash");
 
 function setBlack() {
   browser.browserAction.setIcon({path: "../icons/black_trash.png"});
+  localStorage.setItem('icon', '../icons/black_trash.png');
 }
 function setRed() {
   browser.browserAction.setIcon({path: "../icons/red_trash.png"});
+  localStorage.setItem('icon', '../icons/red_trash.png');
 }
 function setGreen() {
   browser.browserAction.setIcon({path: "../icons/green_trash.png"});
+  localStorage.setItem('icon', '../icons/green_trash.png');
 }
 function setBlue() {
   browser.browserAction.setIcon({path: "../icons/blue_trash.png"});
+  localStorage.setItem('icon', '../icons/blue_trash.png')
 }
 function setYellow() {
   browser.browserAction.setIcon({path: "../icons/yellow_trash.png"});
+  localStorage.setItem('icon', '../icons/yellow_trash.png')
 }
 
 blackTrash.addEventListener("click", setBlack);

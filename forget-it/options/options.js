@@ -19,6 +19,10 @@ function storeSettings() {
     return dataTypes;
   }
 
+  function getIcon() {
+    
+  }
+
   const since = getSince();
   const dataTypes = getTypes();
   browser.storage.local.set({
@@ -59,7 +63,7 @@ gettingStoredSettings.then(updateUI, onError);
 On clicking the save button, save the currently selected settings.
 */
 
-function notifySave() {
+function notify() {
   browser.notifications.create({
     "type": "basic",
     "title": 'Preferences saved',
@@ -69,5 +73,33 @@ function notifySave() {
 const saveButton = document.querySelector("#save-button");
 saveButton.addEventListener("click", () => {
   storeSettings();
-  notifySave();
+  notify();
 });
+
+const redTrash = document.getElementById("black-trash");
+const blackTrash = document.getElementById("red-trash");
+const greenTrash = document.getElementById("green-trash");
+const blueTrash = document.getElementById("blue-trash");
+const yellowTrash = document.getElementById("yellow-trash");
+
+function setBlack() {
+  browser.browserAction.setIcon({path: "../icons/black_trash.png"});
+}
+function setRed() {
+  browser.browserAction.setIcon({path: "../icons/red_trash.png"});
+}
+function setGreen() {
+  browser.browserAction.setIcon({path: "../icons/green_trash.png"});
+}
+function setBlue() {
+  browser.browserAction.setIcon({path: "../icons/blue_trash.png"});
+}
+function setYellow() {
+  browser.browserAction.setIcon({path: "../icons/yellow_trash.png"});
+}
+
+blackTrash.addEventListener("click", setBlack);
+redTrash.addEventListener("click", setRed);
+greenTrash.addEventListener("click", setGreen);
+blueTrash.addEventListener("click", setBlue);
+yellowTrash.addEventListener("click", setYellow);

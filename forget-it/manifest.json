@@ -6,7 +6,7 @@
   "version": "2.0",
   "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/forget-it",
   "icons": {
-    "48": "icons/trash.svg"
+    "32": "icons/black_trash.png"
   },
 
   "background": {
@@ -14,7 +14,7 @@
   },
 
   "browser_action": {
-    "default_icon": "icons/trash.svg",
+    "default_icon": "icons/black_trash.png",
     "default_title": "Forget it!",
     "default_popup": "options/options.html"
   },

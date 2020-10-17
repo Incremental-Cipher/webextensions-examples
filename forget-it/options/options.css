@@ -6,6 +6,11 @@ body {
   font-weight: 300;
 }
 
+img {
+  margin-left: 1em;
+  border: 0.1em solid black;
+}
+
 section.clear-options {
   padding: 0.5em 0;
   margin: 1em 0;
